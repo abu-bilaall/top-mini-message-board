@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js --node-watch",
+    "start": "node --watch app.js",
     "eslint": "npx eslint",
     "prettywrite": "npx prettier --write .",
     "prettycheck": "npx prettier --check .",
