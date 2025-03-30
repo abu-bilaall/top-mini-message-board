@@ -2,9 +2,10 @@
 const asyncHandler = require("express-async-handler");
 const messages = require("../models/messages");
 
+const newMessageEndpoint = "/new";
+
 const getIndexPage = asyncHandler((req, res) => {
-  console.log("getting /");
-  res.render("index", { title: "Mini Messageboard", messages });
+  res.render("index", { title: "Mini Messageboard", messages, newMessageEndpoint });
 });
 
 module.exports = getIndexPage;
