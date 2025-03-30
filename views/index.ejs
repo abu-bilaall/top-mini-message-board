@@ -1,12 +1,28 @@
 <html>
     <head>
         <title><%= title %></title>
+        <link rel="stylesheet" href="styles.css">
+        <!-- Font link -- Inter, courtesy of Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     </head>
     <body>
-        <% for(let i = 0; i < messages.length; i++) { %>
-            <p> <%= messages[i].user %> </p>
-            <p> <%= messages[i].text %> </p>
-            <p> <%= messages[i].added %> </p>
-        <% } %>
+        <header>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="<%= newMessageEndpoint %>">New Message</a></li>
+            </ul>
+        </header>
+        <main>
+            <% for(let i = 0; i < messages.length; i++) { %>
+            <div class="board">
+                    <p>Username: <%= messages[i].user %> </p>
+                    <p>Message: <%= messages[i].text %> </p>
+                    <p>Time added: <%= messages[i].added %> </p>
+            </div>
+            <% } %>
+        </main>
+        <%- include('footer') %>
     </body>
 </html>

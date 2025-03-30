@@ -1,6 +1,27 @@
-<form method='POST' action="/new">
-    <header>Add a new message</header>
-    <input type="text" name="author" id="author">
-    <input type="text" name="message" id="message">
-    <button>Submit</button>
-</form>
+<html>
+  <head>
+    <title>Add a new Message</title>
+    <link rel="stylesheet" href="form.css">
+    <!-- Font link -- Inter, courtesy of Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/new">New Message</a></li>
+      </ul>
+    </header>
+    <main>
+        <form method="POST" action="/new">
+          <div class="form-header">Add a new message</div>
+          <input type="text" name="author" id="author" placeholder="Enter your username" />
+          <textarea name="message" id="message" placeholder="Enter your message" rows="8"></textarea>
+          <button>Submit</button>
+        </form>
+    </main>
+    <%- include('footer') %>
+  </body>
+</html>
