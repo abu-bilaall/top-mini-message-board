@@ -24,8 +24,7 @@ app.use((err, req, res, next) => {
 })
 
 // server listening
-const PORT = 6500;
-const HOSTNAME = "localhost";
-app.listen(PORT, HOSTNAME, () => {
-  console.log(`Server is listening at: http://${HOSTNAME}:${PORT}`);
+const PORT = 4000;
+app.listen(PORT, () => {
+  console.log(`Server is listening at ${PORT}`);
 });
