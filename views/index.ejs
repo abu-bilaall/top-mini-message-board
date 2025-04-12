@@ -11,15 +11,15 @@
         <header>
             <ul>
                 <li><a href="/">Home</a></li>
-                <li><a href="<%= newMessageEndpoint %>">New Message</a></li>
+                <li><a href="/new">New Message</a></li>
             </ul>
         </header>
         <main>
-            <% for(let i = 0; i < messages.length; i++) { %>
+            <% for(let i = 0; i < dbMessages.length; i++) { %>
             <div class="board">
-                    <p>Username: <%= messages[i].user %> </p>
-                    <p>Message: <%= messages[i].text %> </p>
-                    <p>Time added: <%= messages[i].added %> </p>
+                    <p>Username: <%= dbMessages[i].username %> </p>
+                    <p>Message: <%= dbMessages[i].text %> </p>
+                    <p>Time added: <%= dbMessages[i].added %> </p>
             </div>
             <% } %>
         </main>
