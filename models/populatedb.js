@@ -17,7 +17,12 @@ VALUES
 `;
 
 async function seedDb() {
-  const client = new Client({ connectionString: process.env.DATABASE_URI });
+  const client = new Client({
+    connectionString: process.env.DATABASE_URI,
+    ssl: {
+      rejectUnauthorized: false,
+    },
+  });
   try {
     console.log("seeding...");
     await client.connect();
